@@ -23,7 +23,7 @@ if (process.argv.indexOf('--print-arch') > -1) {
 if (process.argv.indexOf('--print-lib') > -1) {
   switch (os.platform()) {
     case 'darwin':
-      console.log('../deps/lib/libsodium.dylib')
+      console.log(path.join(__dirname, '/prebuilds/darwin-x64/libsodium.dylib'))
       break
     case 'linux':
       console.log(path.join(__dirname, '/deps/lib/libsodium.so.18'))
